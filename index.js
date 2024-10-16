@@ -16,8 +16,8 @@ async function sendMail(email, registrationNumber) {
       from: "blockchainclub@vitbhopal.ac.in",
       to: email,
       subject: "Your Ticket to Blockchain Mastery: Blockchain Internships, Jobs and a Sustainable Future for the Next 10 Years!!",
-      html: `<p>Dear Blockchain Enthusiast,</p>,
-          <p>The future of blockchain is calling—and your exclusive entry is just an attachment away!</p>,
+      html: `<p>Dear Blockchain Enthusiast,</p>
+          <p>The future of blockchain is calling—and your exclusive entry is just an attachment away!</p>
           <p> In just a few hours, we’ll dive deep into Unlocking ₹30 LPA+ Internships, Jobs, and a Sustainable Future with Blockchain, followed by an exciting hands-on session tomorrow, 17th October.</p>
           <p>What’s in store?</p>
         
@@ -43,33 +43,29 @@ async function sendMail(email, registrationNumber) {
         },
       ],
     });
-    console.log(`Email sent to ${email}: ${info.response}`);
+    fs.appendFileSync('log.txt', `Email sent to ${email}: ${info.response}\n`);
   } catch (error) {
-    console.log(`Error sending email to ${email}: ${error}`);
+    fs.appendFileSync('log.txt', `Error sending email to ${email}: ${error}\n`);
   }
 }
 
 function readCSVAndSendEmails() {
   const results = [];
-  fs.createReadStream('data.csv')
+  fs.createReadStream('data3.csv')
     .pipe(csv())
     .on('data', (data) => results.push(data))
     .on('end', () => {
-      const chunks = [];
-      for (let i = 0; i < results.length; i += 50) {
-        chunks.push(results.slice(i, i + 50));
-      }
-
-      chunks.forEach((chunk, index) => {
+      let delay = 0;
+      results.forEach((row, index) => {
         setTimeout(() => {
-          chunk.forEach(row => {
-            const email = row.Email;
-            const registrationNumber = row.Registration.trim();
-            sendMail(email, registrationNumber);
-          });
-        }, index * 60000); // 1 minute interval between chunks
+          const email = row.Email;
+          const registrationNumber = row.Registration.trim();
+          sendMail(email, registrationNumber);
+        }, delay);
+        delay += 20000; // 20 seconds delay
       });
     });
 }
+
 
 readCSVAndSendEmails();
