@@ -15,7 +15,8 @@ async function sendMail(email, registrationNumber) {
     const info = await transporter.sendMail({
       from: "blockchainclub@vitbhopal.ac.in",
       to: email,
-      subject: "Your Ticket to Blockchain Mastery: Blockchain Internships, Jobs and a Sustainable Future for the Next 10 Years!!",
+      subject:
+        "Your Ticket to Blockchain Mastery: Blockchain Internships, Jobs and a Sustainable Future for the Next 10 Years!!",
       html: `<p>Dear Blockchain Enthusiast,</p>
           <p>The future of blockchain is calling—and your exclusive entry is just an attachment away!</p>
           <p> In just a few hours, we’ll dive deep into Unlocking ₹30 LPA+ Internships, Jobs, and a Sustainable Future with Blockchain, followed by an exciting hands-on session tomorrow, 17th October.</p>
@@ -43,18 +44,18 @@ async function sendMail(email, registrationNumber) {
         },
       ],
     });
-    fs.appendFileSync('log.txt', `Email sent to ${email}: ${info.response}\n`);
+    fs.appendFileSync("log.txt", `Email sent to ${email}: ${info.response}\n`);
   } catch (error) {
-    fs.appendFileSync('log.txt', `Error sending email to ${email}: ${error}\n`);
+    fs.appendFileSync("log.txt", `Error sending email to ${email}: ${error}\n`);
   }
 }
 
 function readCSVAndSendEmails() {
   const results = [];
-  fs.createReadStream('data3.csv')
+  fs.createReadStream("assets/data3.csv")
     .pipe(csv())
-    .on('data', (data) => results.push(data))
-    .on('end', () => {
+    .on("data", (data) => results.push(data))
+    .on("end", () => {
       let delay = 0;
       results.forEach((row, index) => {
         setTimeout(() => {
@@ -66,6 +67,5 @@ function readCSVAndSendEmails() {
       });
     });
 }
-
 
 readCSVAndSendEmails();
