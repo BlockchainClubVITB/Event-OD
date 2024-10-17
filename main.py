@@ -44,7 +44,7 @@ def generate_qr_code(registration_number, name, logo_path, output_path):
 
     qr_img.paste(logo, pos, mask=logo)
 
-    pass_img = Image.open('Pass.png')
+    pass_img = Image.open('assets/Pass.png')
 
     pass_width, pass_height = pass_img.size
     qr_x = pass_width - qr_width - 50
@@ -57,19 +57,19 @@ def generate_qr_code(registration_number, name, logo_path, output_path):
 def process_csv(csv_file, logo_path):
     df = pd.read_csv(csv_file)
 
-    if not os.path.exists('qrcodes'):
-        os.makedirs('qrcodes')
+    if not os.path.exists('tickets'):
+        os.makedirs('tickets')
 
     for index, row in df.iterrows():
         registration_number = row['Registration'].replace(" ", "").upper()
         name = row['Name']
 
-        output_file = f"qrcodes/{registration_number}.png"
+        output_file = f"tickets/{registration_number}.png"
 
         generate_qr_code(registration_number, name, logo_path, output_file)
         print(f"Generated: {output_file}")
 
-csv_file = 'data3.csv'
-logo_path = 'logo.png'
+csv_file = 'assets/data3.csv'
+logo_path = 'assets/logo.png'
 
 process_csv(csv_file, logo_path)
