@@ -453,3 +453,22 @@ Email sent to mohd.24bai10110@vitbhopal.ac.in: 250 2.0.0 OK  1729105324 d2e1a72f
 Error sending email to raghav.23bai10845: Error: No recipients defined
 Email sent to anurag.23bhi10036@vitbhopal.ac.in: 250 2.0.0 OK  1729105364 d9443c01a7336-20d17f995c7sm32140135ad.83 - gsmtp
 Email sent to raghav.23bai10845@vitbhopal.ac.in: 250 2.0.0 OK  1729105840 d9443c01a7336-20d18036732sm31759565ad.126 - gsmtp
+Email sent to akhil.23bce11678@vitbhopal.ac.in: 250 2.0.0 OK  1729106280 d9443c01a7336-20d1805b005sm31862645ad.240 - gsmtp
+Email sent to akhil.23bce11678@vitbhopal.ac.in: 250 2.0.0 OK  1729106417 d9443c01a7336-20d199d010csm31315265ad.157 - gsmtp
+Email sent to sarika.23mim10210@vitbhopal.ac.in: 250 2.0.0 OK  1729147253 98e67ed59e1d1-2e3e08d0807sm1039091a91.16 - gsmtp
+Email sent to ritika.23mim10069@vitbhopal.ac.in: 250 2.0.0 OK  1729147268 41be03b00d2f7-7ea9c705ed2sm4339093a12.59 - gsmtp
+Email sent to harshita.23bce10503@vitbhopal.ac.in: 250 2.0.0 OK  1729147289 98e67ed59e1d1-2e3e08b16ebsm1034255a91.6 - gsmtp
+Email sent to sahas.23bcg10124@vitbhopal.ac.in: 250 2.0.0 OK  1729147307 98e67ed59e1d1-2e3e08d07d1sm1030119a91.22 - gsmtp
+Email sent to prachi.23mim10136@vitbhopal.ac.in: 250 2.0.0 OK  1729147327 d9443c01a7336-20d1805bc59sm38086895ad.269 - gsmtp
+Email sent to harshit.24mim10257@vitbhopal.ac.in: 250 2.0.0 OK  1729147347 d9443c01a7336-20d17f828a2sm38360435ad.29 - gsmtp
+Email sent to ayush.23mim10206@vitbhopal.ac.in: 250 2.0.0 OK  1729147368 98e67ed59e1d1-2e3b1dad760sm2556074a91.0 - gsmtp
+Email sent to nishi.23boe10070@vitbhopal.ac.in: 250 2.0.0 OK  1729147387 d9443c01a7336-20d17f9d530sm38450035ad.106 - gsmtp
+Email sent to deepanshu.23bai11289@vitbhopal.ac.in: 250 2.0.0 OK  1729147409 d2e1a72fcca58-71e774cd224sm4089933b3a.183 - gsmtp
+Email sent to rayaan.23bai10547@vitbhopal.ac.in: 250 2.0.0 OK  1729147427 d9443c01a7336-20d17f84e38sm38151815ad.57 - gsmtp
+Email sent to prashant.23bai10575@vitbhopal.ac.in: 250 2.0.0 OK  1729147448 d2e1a72fcca58-71e7753683csm4045291b3a.218 - gsmtp
+Email sent to saloni.23bai11305@vitbhopal.ac.in: 250 2.0.0 OK  1729147469 d2e1a72fcca58-71e773a2ff0sm4071778b3a.80 - gsmtp
+Email sent to sarthak.23bsa10058@vitbhopal.ac.in: 250 2.0.0 OK  1729147488 d2e1a72fcca58-71e77371099sm4223836b3a.15 - gsmtp
+Email sent to molly.24bce10425@vitbhopal.ac.in: 250 2.0.0 OK  1729147508 d2e1a72fcca58-71e775089bbsm4092485b3a.190 - gsmtp
+Email sent to tasmay.23bas10088@vitbhopal.ac.in: 250 2.0.0 OK  1729147530 d9443c01a7336-20d17f84e9bsm38559005ad.19 - gsmtp
+Email sent to piyush.23bsa10080@vitbhopal.ac.in: 250 2.0.0 OK  1729147548 d9443c01a7336-20d1805b615sm38078225ad.268 - gsmtp
+Email sent to prince.24mei10160@vitbhopal.ac.in: 250 2.0.0 OK  1729147574 d9443c01a7336-20d180366a8sm38491355ad.165 - gsmtp
