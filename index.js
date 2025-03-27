@@ -15,32 +15,25 @@ async function sendMail(email, registrationNumber) {
     const info = await transporter.sendMail({
       from: "blockchainclub@vitbhopal.ac.in",
       to: email,
-      subject:
-        "Your Ticket to Blockchain Mastery: Blockchain Internships, Jobs and a Sustainable Future for the Next 10 Years!!",
+      subject: "A Milestone Achieved – Your Journey at PokéBlock Quest, AdVITya 2025",
       html: `<p>Dear Blockchain Enthusiast,</p>
-          <p>The future of blockchain is calling—and your exclusive entry is just an attachment away!</p>
-          <p> In just a few hours, we’ll dive deep into Unlocking ₹30 LPA+ Internships, Jobs, and a Sustainable Future with Blockchain, followed by an exciting hands-on session tomorrow, 17th October.</p>
-          <p>What’s in store?</p>
-        
-          <p>Deploy your own smart contract with real-time guidance. </p>
-
-          <p>Earn an official certificate to showcase your new skills. </p>
-
-          <p>Explore top opportunities in the blockchain space. </p>
-          
-          <p>Don’t forget to bring your laptop—it’s your key to fully participating and deploying your own smart contract in the session. </p>
-
-          <p>Ticket Alert: Your attached ticket only grants you entry to this event.  </p>
-
-          <p>See you soon, </p>
-
-          <p>Blockchain Club, </p>
-
-          <p>VIT Bhopal University</p>`,
+          <p>Your participation in <b>PokéBlock Quest</b> at <b>AdVITya 2025</b> was nothing short of remarkable. This wasn’t just another <b>Capture The Flag</b> challenge—it was a test of logic, problem-solving, and determination, and you took it head-on.</p>
+          <p>Every puzzle you cracked and every challenge you solved added to an electrifying competition. Whether you emerged at the top or pushed your limits, you are now part of an elite group that dared to take on this unique Pokémon-themed CTF experience.</p>
+          <p>Enclosed is your official recognition of participation—a testament to your initiative and technical acumen. We encourage you to share this milestone on social media and tag us using <b>#BlockchainClubVITB #PokéBlockQuest #AdVITya2025 #VITBhopal</b>.</p>
+          <p>Let’s stay connected for even bigger challenges ahead:</p>
+          <p>LinkedIn: <a href="https://linkedin.com/company/blockchain-club-vitb/"><b>https://linkedin.com/company/blockchain-club-vitb/</b></a></p>
+          <p>Instagram: <a href="https://instagram.com/blockchain.vitb/"><b>https://instagram.com/blockchain.vitb/</b></a></p>
+          <p>X (Twitter): <a href="https://x.com/blockchainvitb"><b>https://x.com/blockchainvitb</b></a></p>
+          <p>YouTube: <a href="https://youtube.com/@blockchainclubvitb"><b>https://youtube.com/@blockchainclubvitb</b></a></p>
+          <p>WhatsApp Community: <a href="https://chat.whatsapp.com/KI3mnptIqiR6gTgv0grRJG"><b>https://chat.whatsapp.com/KI3mnptIqiR6gTgv0grRJG</b></a></p>
+          <p>This is just the beginning. Stay tuned for what’s next.</p>
+          <p>Best Regards,</p>
+          <p>Blockchain Club<br>
+          VIT Bhopal University</p>`,
       attachments: [
         {
           filename: `${registrationNumber}.png`,
-          path: `./qrcodes/${registrationNumber}.png`,
+          path: `./certificates2/${registrationNumber}.png`,
         },
       ],
     });
@@ -52,7 +45,7 @@ async function sendMail(email, registrationNumber) {
 
 function readCSVAndSendEmails() {
   const results = [];
-  fs.createReadStream("assets/data3.csv")
+  fs.createReadStream("data.csv")
     .pipe(csv())
     .on("data", (data) => results.push(data))
     .on("end", () => {
@@ -63,7 +56,7 @@ function readCSVAndSendEmails() {
           const registrationNumber = row.Registration.trim();
           sendMail(email, registrationNumber);
         }, delay);
-        delay += 20000; // 20 seconds delay
+        delay += 20000;
       });
     });
 }
